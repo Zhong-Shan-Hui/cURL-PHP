@@ -15,9 +15,9 @@ $data = array(
 );
 ```
 Now comes the function to post the data to a new domain given in the URL using cURL.
-```
+
 The function takes two parameters: the URL and the data array.
-```
+
 ```
 function post_to_url($url, $data) {
 
