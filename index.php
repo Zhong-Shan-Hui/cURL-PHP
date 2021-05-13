@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>cURL&PHP</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
     <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
 
@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<body style="background-image: url('img/bg-01.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+<body style="background-image: url('bg-01.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
   <div class="main_container login_signup_container">
     <center><h3>Send $_POST data from domain1.com to domain2.com Using cURL and PHP</h3></center>
     <form id="sub_tic" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
