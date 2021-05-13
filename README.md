@@ -5,7 +5,7 @@ The problem is to store the message form data in a remote database on a differen
 The flow is as follows:
 1. User will submit the form, as usual.
 2. In the form processing PHP(index.php), I use cURL to execute a POST transmission to a PHP script on the other domain.
-3. The remote script(global_receive.php) would do a MySQL INSERT query into the other domain's database table.
+3. The remote script(global_receive.php) would do a MySQL INSERT query into the other domain's database table(receiver_tbl).
 
 Form data is stored in into an array:
 ```
