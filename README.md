@@ -1,4 +1,4 @@
-# Sending $_POST data to other domain Using cURL and PHP
+# Sending $_POST data to other domain Using cURL & PHP
 
 The problem is to store the message form data in a remote database on a different domain that I cannot connect directly to.
 
@@ -8,12 +8,12 @@ The flow is as follows:
 3. The remote script(global_receive.php) would do a MySQL INSERT query into the other domain's database table(receiver_tbl).
 
 Form data is stored in into an array:
-```
+
 $data = array(
    "u_name" => "$u_name",
    "data" => "$data"
 );
-```
+
 Now comes the function to post the data to a new domain given in the URL using cURL.
 
 The function takes two parameters: the URL and the data array.
@@ -40,5 +40,5 @@ function post_to_url($url, $data) {
 }
 ```
 
-On the receiving end, we insert the form data into the database table of domain2.com and then we send the success or failure response based on the post data back to domain1.com.
+On the receiving end, we insert the form data into the database table of domain2 and then we send the success or failure response back to domain1.
 
