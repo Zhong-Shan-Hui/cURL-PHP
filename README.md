@@ -7,38 +7,5 @@ The flow is as follows:
 2. In the form processing PHP(index.php), I use cURL to execute a POST transmission to a PHP script on the other domain.
 3. The remote script(global_receive.php) would do a MySQL INSERT query into the other domain's database table(receiver_tbl).
 
-Form data is stored in into an array:
-
-$data = array(
-   "u_name" => "$u_name",
-   "data" => "$data"
-);
-
-Now comes the function to post the data to a new domain given in the URL using cURL.
-
-The function takes two parameters: the URL and the data array.
-
-```
-function post_to_url($url, $data) {
-
-   $fields = '';
-   foreach($data as $key => $value) { 
-      $fields .= $key . '=' . $value . '&'; 
-   }
-   rtrim($fields, '&');
-
-   $post = curl_init();
-
-   curl_setopt($post, CURLOPT_URL, $url);
-   curl_setopt($post, CURLOPT_POST, count($data));
-   curl_setopt($post, CURLOPT_POSTFIELDS, $fields);
-   curl_setopt($post, CURLOPT_RETURNTRANSFER, true);
-
-   $result = curl_exec($post);
-
-   curl_close($post);
-}
-```
-
-On the receiving end, we insert the form data into the database table of domain2 and then we send the success or failure response back to domain1.
+On the receiving end, we insert the form data into the database table of domain 2 and then we send the success or failure response back to domain 1.
 
